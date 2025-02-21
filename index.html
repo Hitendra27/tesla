@@ -23,24 +23,47 @@
     </div>
 
     <!-- Header -->
-     <header class="flex justify-between items-center px-10 py-6 mt-16">
-     <img src="./images/logo.svg" alt="Tesla" width="120" height="24">
-     <button>
+    <header class="flex justify-between items-center px-10 py-6 mt-16">
+      <img src="./images/logo.svg" alt="Tesla" width="120" height="24" />
+      <button>
         <i class="fa-solid fa-globe"></i> <span class="font-bold">US</span>
-     </button>
+      </button>
     </header>
 
     <!-- Main Section-->
     <main class="flex flex-col md:flex-row justify-between px-4 md:px-10 py-6">
-        <!-- Image Section -->
-         <section class="w-full md:w-3/4">
-            Image Section
-         </section>
+      <!-- Image Section -->
+      <section class="w-full md:w-3/4">
+        <div class="sticky top-24">
+          <!-- Exterior image -->
+          <div
+            class="h-96 bg-gray-200 flex items-center justify-center overflow-hidden mb-4"
+          >
+            <img
+              src="./images/model-y-stealth-grey.jpg"
+              alt="Model Y"
+              class="max-w-full h-auto transform scale-125"
+              id="exterior-image"
+            />
+          </div>
+          <!-- Interior image -->
+          <div
+            class="h-96 bg-gray-200 flex items-center justify-center overflow-hidden mb-4"
+          >
+            <img
+              src="./images/model-y-interior-dark.jpg"
+              alt="Model Y"
+              class="max-w-full h-auto transform scale-125"
+              id="interior-image"
+            />
+          </div>
+        </div>
+      </section>
 
-        <!-- Sidebar -->
-         <aside class="w-full md:w-1/3 pl-0 md:pl-8 mt-6 md:mt-0 z-2">
-            Sidebar
-         </aside>
+      <!-- Sidebar -->
+      <aside class="w-full md:w-1/3 pl-0 md:pl-8 mt-6 md:mt-0 z-2">
+        Sidebar
+      </aside>
     </main>
 
     <script src="./js/main.js"></script>
