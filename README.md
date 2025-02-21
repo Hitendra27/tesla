@@ -29,6 +29,6 @@ UI to customize a Tesla Model Y. Change the exterior, interior and wheels. Add d
    ```sh
    git clone https://github.com/yourusername/tesla-project.git
 
-## License
+## 📄 License
 This project is licensed under the MIT License.
 
