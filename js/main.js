@@ -3,6 +3,7 @@ const exteriorColorSection = document.querySelector("#exterior-buttons");
 const interiorColorSection = document.querySelector("#interior-buttons");
 const exteriorImage = document.querySelector("#exterior-image");
 const interiorImage = document.querySelector("#interior-image");
+const wheelButtonsSection = document.querySelector("#wheel-buttons");
 
 // Handle Top Bar on Scroll
 const handleScroll = () => {
@@ -55,7 +56,19 @@ const handleColorButtonClick = (event) => {
   }
 };
 
+// Wheel Selection
+const handleWheelButtonClick = (event) => {
+  if (event.target.tagName === "BUTTON") {
+    const buttons = document.querySelectorAll("#wheel-buttons button");
+    buttons.forEach((btn) => btn.classList.remove("bg-gray-700", "text-white"));
+
+    // Add selected styles on clicked button
+    event.target.classList.add("bg-gray-700", "text-white");
+  }
+};
+
 // Event Listeners
 window.addEventListener("scroll", () => requestAnimationFrame(handleScroll));
 exteriorColorSection.addEventListener("click", handleColorButtonClick);
 interiorColorSection.addEventListener("click", handleColorButtonClick);
+wheelButtonsSection.addEventListener("click", handleWheelButtonClick);
