@@ -5,6 +5,10 @@ const exteriorImage = document.querySelector("#exterior-image");
 const interiorImage = document.querySelector("#interior-image");
 const wheelButtonsSection = document.querySelector("#wheel-buttons");
 const performanceBtn = document.querySelector("#performance-btn");
+const totalPriceElement = document.querySelector("#total-price");
+
+const basePrice = 52490;
+let currentPrice = basePrice;
 
 let selectedColor = "Stealth Grey";
 const selectedOptions = {
