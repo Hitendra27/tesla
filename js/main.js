@@ -23,8 +23,8 @@ const selectedOptions = {
 // Pricing Options
 const pricing = {
   "Performance Wheels": 2500,
-  "Performance Package": 2500,
-  "Full Self-Driving": 2500,
+  "Performance Package": 5000,
+  "Full Self-Driving": 8500,
   Accessories: {
     "Center Console Trays": 35,
     Sunshade: 105,
@@ -37,12 +37,19 @@ const updateTotalPrice = () => {
   // Reset the current price to base price
   currentPrice = basePrice;
 
+  // Performance Wheel Option
   if (selectedOptions["Performance Wheels"]) {
     currentPrice += pricing["Performance Wheels"];
   }
 
+  // Performance Package Option
   if (selectedOptions["Performance Package"]) {
     currentPrice += pricing["Performance Package"];
+  }
+
+  // Full Self Driving Option
+  if (selectedOptions["Full Self-Driving"]) {
+    currentPrice += pricing["Full Self-Driving"];
   }
 
   // Update the total price in UI
@@ -143,7 +150,10 @@ const handlePerformanceButtonClick = () => {
 };
 
 // Full Self Driving Selection
-const fullSelfDrivingChange = () => {};
+const fullSelfDrivingChange = () => {
+  selectedOptions["Full Self-Driving"] = fullSelfDrivingCheckbox.checked;
+  updateTotalPrice();
+};
 
 // Event Listeners
 window.addEventListener("scroll", () => requestAnimationFrame(handleScroll));
@@ -151,3 +161,4 @@ exteriorColorSection.addEventListener("click", handleColorButtonClick);
 interiorColorSection.addEventListener("click", handleColorButtonClick);
 wheelButtonsSection.addEventListener("click", handleWheelButtonClick);
 performanceBtn.addEventListener("click", handlePerformanceButtonClick);
+fullSelfDrivingCheckbox.addEventListener("change", fullSelfDrivingChange);
