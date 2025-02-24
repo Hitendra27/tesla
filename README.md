@@ -1,5 +1,7 @@
 # 🚗 Tesla Project
 
+View live demo here using github pages: [Live Demo](https://hitendra27.github.io/Digital_Resume/)
+
 A sleek and modern Tesla landing page built using **Vanilla JavaScript**, **HTML**, and **Tailwind CSS**. This project replicates the UI of Tesla's official website, featuring interactive elements, smooth animations, and a fully responsive design.
 Tesla Car Configurator UI (Vanilla JS)
 UI to customize a Tesla Model Y. Change the exterior, interior and wheels. Add different options and get pricing.
