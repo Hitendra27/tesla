@@ -6,6 +6,9 @@ const interiorImage = document.querySelector("#interior-image");
 const wheelButtonsSection = document.querySelector("#wheel-buttons");
 const performanceBtn = document.querySelector("#performance-btn");
 const totalPriceElement = document.querySelector("#total-price");
+const fullSelfDrivingCheckbox = document.querySelector(
+  "#full-self-driving-checkbox"
+);
 
 const basePrice = 52490;
 let currentPrice = basePrice;
@@ -138,6 +141,9 @@ const handlePerformanceButtonClick = () => {
 
   updateTotalPrice();
 };
+
+// Full Self Driving Selection
+const fullSelfDrivingChange = () => {};
 
 // Event Listeners
 window.addEventListener("scroll", () => requestAnimationFrame(handleScroll));
